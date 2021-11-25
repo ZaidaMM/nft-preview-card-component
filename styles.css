@@ -2,7 +2,7 @@
 :root {
   /* Primary colours */
   --soft-blue: hsl(215, 51%, 70%);
-  --Cyan: hsl(178, 100%, 50%);
+  --cyan: hsl(178, 100%, 50%);
   /* Neutral colours */
   --very-dark-blue-main: hsl(217, 54%, 11%); /*(main BG)*/
   --very-dark-blue-card: hsl(216, 50%, 16%); /*(card BG)*/
@@ -22,24 +22,56 @@ body {
 }
 .container {
   background-color: var(--very-dark-blue-card);
-  height: 75vh;
+  height: 600px;
   width: 350px;
   margin-top: 100px;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
 }
 .nft-details {
   display: flex;
   flex-direction: column;
+  /* position: relative; */
 }
 .nft-img {
+  position: relative;
+  /* cursor: pointer; */
   border-radius: 10px;
+  height: 300px;
+  width: 300px;
+}
+.overlay {
+  height: 300px;
+  width: 300px;
+  background: var(--cyan);
+  position: absolute;
+  color: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 26.8%;
+  left: 50%;
+  transform: translate(-50%, -28.5%);
+  transition: 0.2s;
+  border-radius: 10px;
+  opacity: 0;
+}
+.eye {
+  cursor: pointer;
+}
+.overlay:hover {
+  opacity: 0.4;
 }
 .nft-name {
   color: var(--white);
+  font-size: 1.4rem;
   letter-spacing: 1px;
   margin-top: 30px;
   margin-bottom: 15px;
+}
+.nft-name:hover {
+  color: var(--cyan);
+  cursor: pointer;
 }
 .nft-description {
   color: var(--soft-blue);
@@ -57,7 +89,7 @@ body {
   border-bottom: 1px solid var(--very-dark-blue-line);
 }
 .eth-amount {
-  color: var(--Cyan);
+  color: var(--cyan);
   margin-left: 4px;
 }
 .time {
@@ -89,6 +121,10 @@ body {
   color: var(--white);
   font-weight: 300;
 }
+.author-details span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
 .attribution {
   margin-top: 5px;
   font-size: 11px;
@@ -96,4 +132,6 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media only screen and (max-width: 375px) {
 }
