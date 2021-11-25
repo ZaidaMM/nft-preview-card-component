@@ -3,34 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="/styles.css" />
     <title>Frontend Mentor | NFT preview card component</title>
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="container">
-      <div class="card-details">
+      <div class="nft-details">
+        <img
+          class="nft-img"
+          src="./images/image-equilibrium.jpg"
+          alt="Equilibriun #3429"
+        />
         <h2 class="nft-name">Equilibrium #3429</h2>
-        <p class="nft-description">
+        <span class="nft-description">
           Our Equilibrium collection promotes balance and calm.
-        </p>
+        </span>
       </div>
       <div class="sale-details">
         <div class="eth">
@@ -55,7 +48,11 @@
         </div>
       </div>
       <div class="author-details">
-        <img src="./images/image-avatar.png" />
+        <img
+          class="author-img"
+          src="./images/image-avatar.png"
+          alt="Author avatar"
+        />
         <p>Creation of <span>Jules Wyvern</span></p>
       </div>
     </div>
@@ -64,7 +61,12 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Zaida Montano</a>.
+      >. Coded by
+      <a
+        href="https://github.com/ZaidaMM/nft-preview-card-component"
+        target="blank"
+        >Zaida Montano</a
+      >.
     </div>
   </body>
 </html>

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+  /* Primary colours */
+  --soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* Neutral colours */
+  --very-dark-blue-main: hsl(217, 54%, 11%); /*(main BG)*/
+  --very-dark-blue-card: hsl(216, 50%, 16%); /*(card BG)*/
+  --very-dark-blue-line: hsl(215, 32%, 27%); /*(line)*/
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: var(--very-dark-blue-card);
+  height: 75vh;
+  width: 350px;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.nft-details {
+  display: flex;
+  flex-direction: column;
+}
+.nft-img {
+  border-radius: 10px;
+}
+.nft-name {
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.nft-description {
+  color: var(--soft-blue);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.sale-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--very-dark-blue-line);
+}
+.eth-amount {
+  color: var(--Cyan);
+  margin-left: 4px;
+}
+.time {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.time-left {
+  color: var(--soft-blue);
+  margin-left: 4px;
+}
+.author-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+.author-img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  margin-right: 15px;
+}
+.author-details p {
+  color: var(--soft-blue);
+}
+.author-details span {
+  color: var(--white);
+  font-weight: 300;
+}
+.attribution {
+  margin-top: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
