@@ -9,11 +9,16 @@
   --very-dark-blue-line: hsl(215, 32%, 27%); /*(line)*/
   --white: hsl(0, 0%, 100%);
 }
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: 'Outfit', sans-serif;
+  font-size: 18px;
   background-color: var(--very-dark-blue-main);
   display: flex;
   flex-direction: column;
@@ -27,38 +32,34 @@ body {
   margin-top: 100px;
   padding: 25px;
   border-radius: 10px;
+  
 }
 .nft-details {
   display: flex;
   flex-direction: column;
 }
 .nft-img {
-  position: relative;
+  position: absolute;
   border-radius: 10px;
   height: 300px;
   width: 300px;
+  transition: 0.3s ease;
 }
 .overlay {
   height: 300px;
   width: 300px;
   background: var(--cyan);
-  position: absolute;
-  color: var(--clr-white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 26.8%;
-  left: 50%;
-  transform: translate(-50%, -28.5%);
-  transition: 0.2s;
+  color: var(--white);
   border-radius: 10px;
   opacity: 0;
 }
 .eye {
   cursor: pointer;
+  margin-top: 43%;
+  margin-left: 43%;
 }
 .overlay:hover {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 .nft-name {
   color: var(--white);
@@ -73,7 +74,7 @@ body {
 }
 .nft-description {
   color: var(--soft-blue);
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   line-height: 1.6;
   font-weight: 300;
   margin-bottom: 20px;
@@ -89,6 +90,7 @@ body {
 .eth-amount {
   color: var(--cyan);
   margin-left: 4px;
+  font-size: 1rem;
 }
 .time {
   display: flex;
@@ -97,13 +99,14 @@ body {
 }
 .time-left {
   color: var(--soft-blue);
+  font-size: 1rem;
   margin-left: 4px;
 }
 .author-details {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .author-img {
   height: 35px;
@@ -128,14 +131,18 @@ body {
   font-size: 11px;
   text-align: center;
 }
+.attribution {
+  color: var(--soft-blue);
+  margin-top: 10px;
+}
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 @media only screen and (max-width: 678px) {
   .container {
-    margin: 30px 0 10px 0 ;
-    padding: 20px 10px ;
-    height: 520px;
+    margin: 50px 0 5px 0;
+    padding: 20px ;
+    height: 560px;
     width: 85%;
   }
   .nft-img-container {
@@ -144,32 +151,20 @@ body {
   }
   .nft-img {
     border-radius: 10px;
-    height: 250px;
-    width: 250px;
-    /* display: flex; */
-    /* flex: wrap; */
+    height: 280px;
+    width: 280px;
+
   }
   .overlay {
-    height: 250px;
-    width: 250px;
-    background: var(--cyan);
-    position: absolute;
-    color: var(--clr-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 16.5%;
-    left: 50%;
-    transform: translate(-50%, --16.5%);
-    transition: 0.2s;
-    border-radius: 10px;
-    opacity: 0;
+    height: 280px;
+    width: 280px;
+    
   }
   .nft-name,
   .nft-description,
   .sale-details,
   .time {
-    padding: 0 15px;
+    padding: 0 14px;
   }
   .nft-name {
     font-size: 1.2rem;
@@ -180,9 +175,6 @@ body {
   .sale-details {
     font-size: 0.9rem;
     padding-bottom: 15px;
-    
   }
-  .author-details {
-    margin-top: 8px;
-  }
+  
 }
